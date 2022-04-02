@@ -22,11 +22,23 @@ public class JpaMain {
                 member.setAge(10);
                 em.persist(member);
 
+
+
+
+
+
+
                 em.flush();
                 em.clear();
 
                 List<MemberDTO> result = em.createQuery("select new jpql.MemberDTO(m.username,m.age) from Member m", MemberDTO.class)
                         .getResultList();
+
+
+
+
+
+
 
                 MemberDTO memberDTO = result.get(0);
                 System.out.println("memberDTO = " + memberDTO.getUsername());
