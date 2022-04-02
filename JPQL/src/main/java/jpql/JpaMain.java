@@ -28,11 +28,21 @@ public class JpaMain {
 
 
 
+
+
+
+
                 em.flush();
                 em.clear();
 
                 List<MemberDTO> result = em.createQuery("select new jpql.MemberDTO(m.username,m.age) from Member m", MemberDTO.class)
                         .getResultList();
+
+
+
+
+
+
 
 
 
